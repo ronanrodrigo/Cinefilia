@@ -15,6 +15,7 @@
 		348238831DDCE82E00CAF5D6 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3482386E1DDCE82E00CAF5D6 /* Shared.framework */; };
 		348238841DDCE82E00CAF5D6 /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3482386E1DDCE82E00CAF5D6 /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		348C8B421DDCF0B500025B82 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348C8B411DDCF0B500025B82 /* Movie.swift */; };
+		348C8B441DDCF43B00025B82 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348C8B431DDCF43B00025B82 /* Genre.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		348238761DDCE82E00CAF5D6 /* SharedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3482387F1DDCE82E00CAF5D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		348C8B411DDCF0B500025B82 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		348C8B431DDCF43B00025B82 /* Genre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				348C8B411DDCF0B500025B82 /* Movie.swift */,
+				348C8B431DDCF43B00025B82 /* Genre.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				348C8B421DDCF0B500025B82 /* Movie.swift in Sources */,
+				348C8B441DDCF43B00025B82 /* Genre.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
