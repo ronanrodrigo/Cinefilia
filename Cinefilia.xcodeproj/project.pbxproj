@@ -138,8 +138,8 @@
 		3482386F1DDCE82E00CAF5D6 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				348C8B401DDCF09900025B82 /* Entities */,
 				3482388B1DDCE84600CAF5D6 /* Base */,
+				348C8B401DDCF09900025B82 /* Entities */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -174,7 +174,7 @@
 			children = (
 				348C8B411DDCF0B500025B82 /* Movie.swift */,
 			);
-			name = Entities;
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
