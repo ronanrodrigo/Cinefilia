@@ -1,0 +1,30 @@
+public typealias JSONDictionary = [String: AnyObject]
+
+public struct Resource<T> {
+    public let url: URL
+    public let parse: (Data) -> T?
+
+    public init(url: URL, parseJSON: @escaping (Any) -> T?) {
+        self.url = url
+        self.parse = { data in
+            let json = try? JSONSerialization.jsonObject(with: data, options: [])
+            return json.flatMap(parseJSON)
+        }
+    }
+
+}
+
+public struct Resources {
+    private static let baseUrl = "https://api.themoviedb.org/3"
+    private static let apiKey = "1f54bd990f1cdfb230adb312546d765d"
+
+    static func upcomingMovies(page: Int = 1) -> Resource<[Movie]> {
+        let upcomingMoviesUrl = URL(string: "\(baseUrl)/movie/upcoming?api_key=\(apiKey)&page=\(page)")!
+        return Resource<[Movie]>(url: upcomingMoviesUrl) { json in
+            guard let dictionary = json as? JSONDictionary,
+                let moviesDictionary = dictionary["results"] as? [JSONDictionary]
+            else { return nil }
+            return moviesDictionary.flatMap(MovieEntity.init)
+        }
+    }
+}
