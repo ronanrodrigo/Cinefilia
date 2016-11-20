@@ -11,4 +11,12 @@ public struct GenreEntity: Genre {
         self.id = id
         self.name = name
     }
+
+    public init?(dictionary: JSONDictionary) {
+        guard let id = dictionary["id"] as? Int,
+            let name = dictionary["name"] as? String
+        else { return nil }
+
+        self.init(id: id, name: name)
+    }
 }

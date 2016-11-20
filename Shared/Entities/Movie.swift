@@ -40,13 +40,7 @@ public struct MovieEntity: Movie {
             let backDropPath = dictionary["backdrop_path"] as? String
         else { return nil }
 
-        self.init(
-            id: id,
-            title: title,
-            overview: overview,
-            releaseDate: releaseDate,
-            posterPath: posterPath,
-            backDropPath: backDropPath,
-            genres: [])
+        self.init(id: id, title: title, overview: overview, releaseDate: releaseDate, posterPath: posterPath, backDropPath: backDropPath,
+                  genres: [])
     }
 }
