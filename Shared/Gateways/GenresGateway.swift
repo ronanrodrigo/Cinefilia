@@ -13,8 +13,8 @@ public class GenresGatewayWebService: GenresGateway {
     }
 
     public func list(completion: @escaping ([Genre]?, Error?) -> ()) {
-        webService.load(resource: Resources.moviesGenres(), completion: { repositories, error in
-            completion(repositories, error)
+        webService.load(resource: Resources.moviesGenres(), completion: { genres, error in
+            completion(genres, error)
         })
     }
 
