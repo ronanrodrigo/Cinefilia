@@ -30,4 +30,14 @@ public struct Resources {
         }
     }
 
+    static func moviesGenres() -> Resource<[Genre]> {
+        let genresUrl = URL(string: "\(baseUrl)/genre/movie/list?api_key=\(apiKey)")!
+        return Resource<[Genre]>(url: genresUrl) { json in
+            guard let dictionary = json as? JSONDictionary,
+                let genresDictionary = dictionary["genres"] as? [JSONDictionary]
+            else { return nil }
+            return genresDictionary.flatMap(GenreEntity.init)
+        }
+    }
+
 }
