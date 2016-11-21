@@ -5,7 +5,6 @@ public protocol Genre {
 
 }
 
-
 public struct GenreEntity: Genre {
 
     public var id: Int

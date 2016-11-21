@@ -15,7 +15,6 @@ public struct Resource<T> {
 
 }
 
-
 public struct Resources {
 
     private static let baseUrl = "https://api.themoviedb.org/3"

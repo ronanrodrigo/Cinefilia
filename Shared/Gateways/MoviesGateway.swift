@@ -4,7 +4,6 @@ public protocol MoviesGateway {
 
 }
 
-
 public class MoviesGatewayWebService: MoviesGateway {
 
     private var webService: WebService
