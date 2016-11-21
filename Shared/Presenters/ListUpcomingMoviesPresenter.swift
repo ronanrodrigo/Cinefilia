@@ -1,4 +1,4 @@
-public protocol ListUpcomingMoviesPresenter: class {
+public protocol ListUpcomingMoviesPresenter {
 
     func displayMovies(movies: [Movie])
     func loadGenres(genres: [Genre])

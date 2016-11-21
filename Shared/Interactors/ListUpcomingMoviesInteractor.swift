@@ -2,7 +2,7 @@ public class ListUpcomingMoviesInteractor {
 
     private var moviesGateway: MoviesGateway
     private var genresGateway: GenresGateway
-    private weak var presenter: ListUpcomingMoviesPresenter?
+    private var presenter: ListUpcomingMoviesPresenter
 
     public init(moviesGateway: MoviesGateway, genresGateway: GenresGateway, presenter: ListUpcomingMoviesPresenter) {
         self.moviesGateway = moviesGateway
@@ -13,17 +13,17 @@ public class ListUpcomingMoviesInteractor {
     public func list() {
         genresGateway.list { genres, error in
             if let genres = genres {
-                self.presenter?.loadGenres(genres: genres)
+                self.presenter.loadGenres(genres: genres)
             } else if let error = error {
-                self.presenter?.displayError(message: error.localizedDescription)
+                self.presenter.displayError(message: error.localizedDescription)
             }
         }
 
-        moviesGateway.list(page: 0) { movies, error in
+        moviesGateway.list(page: 1) { movies, error in
             if let movies = movies {
-                self.presenter?.displayMovies(movies: movies)
+                self.presenter.displayMovies(movies: movies)
             } else if let error = error {
-                self.presenter?.displayError(message: error.localizedDescription)
+                self.presenter.displayError(message: error.localizedDescription)
             }
         }
     }
