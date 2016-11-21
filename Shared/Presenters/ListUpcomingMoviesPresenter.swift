@@ -1,5 +1,7 @@
-public protocol ListUpcomingMoviesPresenter {
+public protocol ListUpcomingMoviesPresenter: class {
 
-    func showMoviesWithGenres(movies: [Movie], genres: [Genre])
+    func displayMovies(movies: [Movie])
+    func loadGenres(genres: [Genre])
+    func displayError(message: String)
 
 }

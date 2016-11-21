@@ -6,7 +6,7 @@ public protocol Movie {
     var releaseDate: Date { get }
     var posterPath: String { get }
     var backDropPath: String { get }
-    var genres: [Genre] { get }
+    var genresIds: [Int] { get }
 
 }
 
@@ -18,16 +18,16 @@ public struct MovieEntity: Movie {
     public var releaseDate: Date
     public var posterPath: String
     public var backDropPath: String
-    public var genres: [Genre]
+    public var genresIds: [Int]
 
-    public init(id: Int, title: String, overview: String, releaseDate: Date, posterPath: String, backDropPath: String, genres: [Genre]) {
+    public init(id: Int, title: String, overview: String, releaseDate: Date, posterPath: String, backDropPath: String, genresIds: [Int]) {
         self.id = id
         self.title = title
         self.overview = overview
         self.releaseDate = releaseDate
         self.posterPath = posterPath
         self.backDropPath = backDropPath
-        self.genres = genres
+        self.genresIds = genresIds
     }
 
     public init?(dictionary: JSONDictionary) {
@@ -40,11 +40,12 @@ public struct MovieEntity: Movie {
             let releaseDateString = dictionary["release_date"] as? String,
             let releaseDate = dateFormatter.date(from: releaseDateString),
             let posterPath = dictionary["poster_path"] as? String,
-            let backDropPath = dictionary["backdrop_path"] as? String
+            let backDropPath = dictionary["backdrop_path"] as? String,
+            let genresIds = dictionary["genre_ids"] as? [Int]
         else { return nil }
 
         self.init(id: id, title: title, overview: overview, releaseDate: releaseDate, posterPath: posterPath, backDropPath: backDropPath,
-                  genres: [])
+                  genresIds: genresIds)
     }
 
 }
