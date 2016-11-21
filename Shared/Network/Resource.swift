@@ -19,6 +19,7 @@ public struct Resources {
 
     private static let baseUrl = "https://api.themoviedb.org/3"
     private static let apiKey = "1f54bd990f1cdfb230adb312546d765d"
+    private static let imageBaseUrl = "https://image.tmdb.org/t/p/w500"
 
     static func upcomingMovies(page: Int = 1) -> Resource<[Movie]> {
         let upcomingMoviesUrl = URL(string: "\(baseUrl)/movie/upcoming?api_key=\(apiKey)&page=\(page)")!
@@ -38,6 +39,10 @@ public struct Resources {
             else { return nil }
             return genresDictionary.flatMap(GenreEntity.init)
         }
+    }
+
+    static func movieBackdrop(path: String) -> URL {
+        return URL(string: "\(imageBaseUrl)\(path)")!
     }
 
 }

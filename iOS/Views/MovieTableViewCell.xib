@@ -12,24 +12,38 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="170" id="KGk-i7-Jjw" customClass="MovieTableViewCell" customModule="iOS" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="350" id="KGk-i7-Jjw" customClass="MovieTableViewCell" customModule="iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="350"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="169"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="349"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Movie" translatesAutoresizingMaskIntoConstraints="NO" id="RKn-bP-lYk">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="166.5"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RKn-bP-lYk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="346.5"/>
                     </imageView>
-                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XLJ-Zj-SOR">
-                        <rect key="frame" x="13" y="144.5" width="10" height="15"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="drQ-iv-u3d">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="346.5"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Comedy" translatesAutoresizingMaskIntoConstraints="NO" id="GYs-VH-P4a" userLabel="Genre">
-                                <rect key="frame" x="0.0" y="0.0" width="10" height="15"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Movie" translatesAutoresizingMaskIntoConstraints="NO" id="LRP-Ov-OUx">
+                                <rect key="frame" x="135" y="148.5" width="50" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="10" id="9pN-dz-NMw"/>
+                                    <constraint firstAttribute="height" constant="50" id="03S-RP-5Z0"/>
+                                    <constraint firstAttribute="width" constant="50" id="yls-iy-8JH"/>
                                 </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12637259066104889" green="0.12639245390892029" blue="0.12636536359786987" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="LRP-Ov-OUx" firstAttribute="centerY" secondItem="drQ-iv-u3d" secondAttribute="centerY" id="jL6-jO-1yF"/>
+                            <constraint firstItem="LRP-Ov-OUx" firstAttribute="centerX" secondItem="drQ-iv-u3d" secondAttribute="centerX" id="wIl-9V-jdH"/>
+                        </constraints>
+                    </view>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XLJ-Zj-SOR">
+                        <rect key="frame" x="13" y="319.5" width="25" height="15"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Comedy" translatesAutoresizingMaskIntoConstraints="NO" id="GYs-VH-P4a" userLabel="Genre">
+                                <rect key="frame" x="0.0" y="0.0" width="25" height="15"/>
                             </imageView>
                         </subviews>
                         <constraints>
@@ -37,19 +51,19 @@
                         </constraints>
                     </stackView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/01/2016" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MqT-wn-oWS">
-                        <rect key="frame" x="241.5" y="146" width="65.5" height="13.5"/>
+                        <rect key="frame" x="241.5" y="321" width="65.5" height="13.5"/>
                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="11"/>
                         <color key="textColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attack of the Lederhosen Zombies" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpt-YM-QOM">
-                        <rect key="frame" x="13" y="75.5" width="294" height="48"/>
+                        <rect key="frame" x="13" y="250.5" width="294" height="48"/>
                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
                         <color key="textColor" red="0.98039215686274506" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pr3-Jh-8Pg" userLabel="Divider">
-                        <rect key="frame" x="13" y="133.5" width="294" height="1"/>
+                        <rect key="frame" x="13" y="308.5" width="294" height="1"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="5vl-bl-vkE"/>
@@ -57,24 +71,29 @@
                     </view>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="drQ-iv-u3d" secondAttribute="bottom" constant="3" id="2yS-zU-ggy"/>
                     <constraint firstItem="pr3-Jh-8Pg" firstAttribute="top" secondItem="xpt-YM-QOM" secondAttribute="bottom" constant="10" id="AYL-1R-uhU"/>
+                    <constraint firstAttribute="trailing" secondItem="drQ-iv-u3d" secondAttribute="trailing" id="EbH-FW-R6f"/>
                     <constraint firstAttribute="trailing" secondItem="RKn-bP-lYk" secondAttribute="trailing" id="J9s-wc-R0R"/>
                     <constraint firstItem="pr3-Jh-8Pg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="Lcf-YV-6Cc"/>
                     <constraint firstAttribute="bottom" secondItem="RKn-bP-lYk" secondAttribute="bottom" constant="3" id="Mta-7s-pP6"/>
                     <constraint firstItem="MqT-wn-oWS" firstAttribute="centerY" secondItem="XLJ-Zj-SOR" secondAttribute="centerY" id="QTC-OA-Qd1"/>
                     <constraint firstItem="xpt-YM-QOM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="S8K-J3-RAv"/>
+                    <constraint firstItem="drQ-iv-u3d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="UM7-bk-5nl"/>
                     <constraint firstAttribute="trailingMargin" secondItem="xpt-YM-QOM" secondAttribute="trailing" constant="5" id="b4f-So-zG1"/>
                     <constraint firstItem="RKn-bP-lYk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="eUT-Ap-DDP"/>
                     <constraint firstAttribute="trailingMargin" secondItem="pr3-Jh-8Pg" secondAttribute="trailing" constant="5" id="eYZ-oP-WGF"/>
                     <constraint firstAttribute="trailingMargin" secondItem="MqT-wn-oWS" secondAttribute="trailing" constant="5" id="fbx-aP-3Z7"/>
-                    <constraint firstAttribute="bottom" secondItem="XLJ-Zj-SOR" secondAttribute="bottom" constant="10" id="foS-MZ-OzL"/>
+                    <constraint firstAttribute="bottom" secondItem="XLJ-Zj-SOR" secondAttribute="bottom" constant="15" id="foS-MZ-OzL"/>
                     <constraint firstItem="XLJ-Zj-SOR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="hfl-xv-p8C"/>
+                    <constraint firstItem="drQ-iv-u3d" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="j2o-A9-tF0"/>
                     <constraint firstItem="XLJ-Zj-SOR" firstAttribute="top" secondItem="pr3-Jh-8Pg" secondAttribute="bottom" constant="10" id="ldr-EZ-kzM"/>
                     <constraint firstItem="RKn-bP-lYk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="rpK-hh-anw"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="backdrop" destination="RKn-bP-lYk" id="M6h-Va-4QM"/>
+                <outlet property="backdropPlaceholder" destination="drQ-iv-u3d" id="hM0-Dg-zFj"/>
                 <outlet property="genresImages" destination="XLJ-Zj-SOR" id="BG1-fw-NhW"/>
                 <outlet property="releaseDate" destination="MqT-wn-oWS" id="gVM-e3-PeB"/>
                 <outlet property="title" destination="xpt-YM-QOM" id="YRx-Le-jnq"/>
@@ -84,6 +103,6 @@
     </objects>
     <resources>
         <image name="Comedy" width="25" height="25"/>
-        <image name="Movie" width="500" height="281"/>
+        <image name="Movie" width="100" height="100"/>
     </resources>
 </document>

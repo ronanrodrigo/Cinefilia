@@ -4,7 +4,7 @@ import Shared
 class GenericDataSource<T, U: UITableViewCell>: NSObject, UITableViewDataSource {
 
     var objects: [T] = []
-    var images: [String: UIImage] = [String: UIImage]()
+    var images: [Int: UIImage] = [Int: UIImage]()
     private var cellIdentifier = String(describing: U.self)
     private var configureCell: (T, U) -> ()
 

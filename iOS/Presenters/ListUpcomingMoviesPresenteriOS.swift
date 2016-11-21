@@ -2,7 +2,7 @@ import Shared
 
 class ListUpcomingMoviesPresenteriOS: ListUpcomingMoviesPresenter {
 
-    var delegate: ListUpcomingMoviesDelegate
+    private weak var delegate: ListUpcomingMoviesDelegate?
 
     init(delegate: ListUpcomingMoviesDelegate) {
         self.delegate = delegate
@@ -14,7 +14,7 @@ class ListUpcomingMoviesPresenteriOS: ListUpcomingMoviesPresenter {
     func displayMovies(movies: [Movie]) {
         DispatchQueue.main.async {
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
-            self.delegate.didList(movies: movies)
+            self.delegate?.didList(movies: movies)
         }
     }
 

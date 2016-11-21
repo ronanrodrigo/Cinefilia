@@ -1,6 +1,7 @@
 public protocol MoviesGateway {
 
     func list(page: Int, completion: @escaping ([Movie]?, Error?) -> ())
+    func getBackdrop(path: String, completion: @escaping (Data?) -> ())
 
 }
 
@@ -16,6 +17,12 @@ public class MoviesGatewayWebService: MoviesGateway {
         webService.load(resource: Resources.upcomingMovies(page: page), completion: { movies, error in
             completion(movies, error)
         })
+    }
+
+    public func getBackdrop(path: String, completion: @escaping (Data?) -> ()) {
+        webService.download(url: Resources.movieBackdrop(path: path)) { data in
+            completion(data)
+        }
     }
 
 }

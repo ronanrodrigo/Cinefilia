@@ -30,6 +30,11 @@
 		347F00FE1DE377580099D637 /* GetMovieBackdropInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347F00FD1DE377580099D637 /* GetMovieBackdropInteractor.swift */; };
 		347F01031DE379850099D637 /* ListUpcomingMoviesPresenteriOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347F01021DE379850099D637 /* ListUpcomingMoviesPresenteriOS.swift */; };
 		347F01061DE37B770099D637 /* MoviesRouterNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347F01051DE37B770099D637 /* MoviesRouterNavigation.swift */; };
+		347F01081DE384470099D637 /* GetMovieBackdropPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347F01071DE384470099D637 /* GetMovieBackdropPresenter.swift */; };
+		347F010A1DE3865C0099D637 /* GetMovieBackdropPresenteriOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347F01091DE3865B0099D637 /* GetMovieBackdropPresenteriOS.swift */; };
+		347F010C1DE3873D0099D637 /* GetMovieBackdropInteractorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347F010B1DE3873D0099D637 /* GetMovieBackdropInteractorFactory.swift */; };
+		347F010E1DE38DA70099D637 /* GetMovieBackdropInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347F010D1DE38DA70099D637 /* GetMovieBackdropInteractorTests.swift */; };
+		347F01101DE38DE50099D637 /* GetMovieBackdropPresenterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347F010F1DE38DE50099D637 /* GetMovieBackdropPresenterStub.swift */; };
 		348238461DDCE77B00CAF5D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348238451DDCE77B00CAF5D6 /* AppDelegate.swift */; };
 		3482384D1DDCE77B00CAF5D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3482384C1DDCE77B00CAF5D6 /* Assets.xcassets */; };
 		348238501DDCE77B00CAF5D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3482384E1DDCE77B00CAF5D6 /* LaunchScreen.storyboard */; };
@@ -106,6 +111,11 @@
 		347F00FD1DE377580099D637 /* GetMovieBackdropInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetMovieBackdropInteractor.swift; sourceTree = "<group>"; };
 		347F01021DE379850099D637 /* ListUpcomingMoviesPresenteriOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListUpcomingMoviesPresenteriOS.swift; sourceTree = "<group>"; };
 		347F01051DE37B770099D637 /* MoviesRouterNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesRouterNavigation.swift; sourceTree = "<group>"; };
+		347F01071DE384470099D637 /* GetMovieBackdropPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetMovieBackdropPresenter.swift; sourceTree = "<group>"; };
+		347F01091DE3865B0099D637 /* GetMovieBackdropPresenteriOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetMovieBackdropPresenteriOS.swift; sourceTree = "<group>"; };
+		347F010B1DE3873D0099D637 /* GetMovieBackdropInteractorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetMovieBackdropInteractorFactory.swift; sourceTree = "<group>"; };
+		347F010D1DE38DA70099D637 /* GetMovieBackdropInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetMovieBackdropInteractorTests.swift; sourceTree = "<group>"; };
+		347F010F1DE38DE50099D637 /* GetMovieBackdropPresenterStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetMovieBackdropPresenterStub.swift; sourceTree = "<group>"; };
 		348238421DDCE77B00CAF5D6 /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		348238451DDCE77B00CAF5D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3482384C1DDCE77B00CAF5D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -181,6 +191,7 @@
 		347F00D41DE3599D0099D637 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				347F01071DE384470099D637 /* GetMovieBackdropPresenter.swift */,
 				347F00D51DE359A40099D637 /* ListUpcomingMoviesPresenter.swift */,
 			);
 			path = Presenters;
@@ -197,6 +208,7 @@
 		347F00DD1DE35DA00099D637 /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
+				347F010D1DE38DA70099D637 /* GetMovieBackdropInteractorTests.swift */,
 				347F00DE1DE35DAC0099D637 /* ListUpcomingMoviesInteractorTests.swift */,
 			);
 			path = Interactors;
@@ -205,6 +217,7 @@
 		347F00E01DE35DE50099D637 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				347F010F1DE38DE50099D637 /* GetMovieBackdropPresenterStub.swift */,
 				347F00E11DE35DF30099D637 /* ListUpcomingMoviesPresenterStub.swift */,
 			);
 			path = Presenters;
@@ -229,6 +242,7 @@
 		347F00EA1DE366430099D637 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
+				347F010B1DE3873D0099D637 /* GetMovieBackdropInteractorFactory.swift */,
 				347F00EB1DE3665A0099D637 /* ListUpcomingMoviesInteractorFactory.swift */,
 			);
 			path = Factories;
@@ -256,9 +270,9 @@
 		347F00FF1DE379540099D637 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				347F01091DE3865B0099D637 /* GetMovieBackdropPresenteriOS.swift */,
 				347F01021DE379850099D637 /* ListUpcomingMoviesPresenteriOS.swift */,
 			);
-			name = Presenters;
 			path = Presenters;
 			sourceTree = "<group>";
 		};
@@ -267,7 +281,6 @@
 			children = (
 				347F01051DE37B770099D637 /* MoviesRouterNavigation.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -573,6 +586,7 @@
 				347F01061DE37B770099D637 /* MoviesRouterNavigation.swift in Sources */,
 				347F01031DE379850099D637 /* ListUpcomingMoviesPresenteriOS.swift in Sources */,
 				347F00F51DE369270099D637 /* UpcomingMoviesViewController.swift in Sources */,
+				347F010A1DE3865C0099D637 /* GetMovieBackdropPresenteriOS.swift in Sources */,
 				347F00FC1DE377180099D637 /* GenericDataSource.swift in Sources */,
 				347F00F91DE3699C0099D637 /* MovieTableViewCell.swift in Sources */,
 			);
@@ -588,8 +602,10 @@
 				347F00FE1DE377580099D637 /* GetMovieBackdropInteractor.swift in Sources */,
 				34B879A81DE0C94900999C3D /* Resource.swift in Sources */,
 				348C8B421DDCF0B500025B82 /* Movie.swift in Sources */,
+				347F010C1DE3873D0099D637 /* GetMovieBackdropInteractorFactory.swift in Sources */,
 				347F00CE1DE358CE0099D637 /* WebService.swift in Sources */,
 				347F00D81DE35A6D0099D637 /* ListUpcomingMoviesInteractor.swift in Sources */,
+				347F01081DE384470099D637 /* GetMovieBackdropPresenter.swift in Sources */,
 				347F00E91DE365D90099D637 /* MoviesRouter.swift in Sources */,
 				348C8B441DDCF43B00025B82 /* Genre.swift in Sources */,
 				347F00D31DE359910099D637 /* GenresGateway.swift in Sources */,
@@ -600,10 +616,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				347F01101DE38DE50099D637 /* GetMovieBackdropPresenterStub.swift in Sources */,
 				347F00C51DE2168C0099D637 /* GenreEntityTests.swift in Sources */,
 				347F00E51DE35EF80099D637 /* ErrorFake.swift in Sources */,
 				347F00DC1DE35D240099D637 /* WebServiceFake.swift in Sources */,
 				347F00E21DE35DF30099D637 /* ListUpcomingMoviesPresenterStub.swift in Sources */,
+				347F010E1DE38DA70099D637 /* GetMovieBackdropInteractorTests.swift in Sources */,
 				34B879AB1DE0CF4E00999C3D /* MovieEntityTests.swift in Sources */,
 				347F00DF1DE35DAC0099D637 /* ListUpcomingMoviesInteractorTests.swift in Sources */,
 				347F00C81DE217F20099D637 /* EntityTestCase.swift in Sources */,
