@@ -11,7 +11,7 @@ class GenreEntityTests: EntityTestCase {
     }
 
     func testConvertJSONDictionaryToGenreEntity() {
-        let genres = genresDictionary["results"] as! [JSONDictionary]
+        let genres = genresDictionary["genres"] as! [JSONDictionary]
         let createdGenres = genres.flatMap(GenreEntity.init)
 
         XCTAssertEqual(1, createdGenres.count)
