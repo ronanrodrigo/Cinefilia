@@ -208,9 +208,9 @@
 		34B879A91DE0CF2400999C3D /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				34B879AA1DE0CF4E00999C3D /* MovieEntityTests.swift */,
-				347F00C41DE2168C0099D637 /* GenreEntityTests.swift */,
 				347F00C71DE217F20099D637 /* EntityTestCase.swift */,
+				347F00C41DE2168C0099D637 /* GenreEntityTests.swift */,
+				34B879AA1DE0CF4E00999C3D /* MovieEntityTests.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -226,8 +226,8 @@
 		34B879AE1DE0D27200999C3D /* Json */ = {
 			isa = PBXGroup;
 			children = (
-				34B879AF1DE0D28900999C3D /* Movies.json */,
 				347F00C21DE2162F0099D637 /* Genres.json */,
+				34B879AF1DE0D28900999C3D /* Movies.json */,
 			);
 			path = Json;
 			sourceTree = "<group>";
