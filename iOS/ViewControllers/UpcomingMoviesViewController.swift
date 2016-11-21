@@ -4,6 +4,7 @@ import Shared
 protocol ListUpcomingMoviesDelegate: class {
 
     func didList(movies: [Movie])
+    func didLoad(genres: [Genre])
     func didDisplayError(message: String)
     func didGetAvatar(movie: Movie, image: UIImage)
 
@@ -15,6 +16,7 @@ class UpcomingMoviesViewController: UIViewController, ListUpcomingMoviesDelegate
     private var dataSource: GenericDataSource<Movie, MovieTableViewCell>?
     private var listUpcomingMoviesInteractor: ListUpcomingMoviesInteractor?
     private var getMovieBackdropInteractor: GetMovieBackdropInteractor?
+    private var genres: [Genre] = []
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -35,6 +37,8 @@ class UpcomingMoviesViewController: UIViewController, ListUpcomingMoviesDelegate
         tableView.register(cellNib, forCellReuseIdentifier: cellIdentifier)
         dataSource = GenericDataSource() { (movie, cell) in
             cell.configure(movie: movie)
+            let movieGenres = self.genres.filter({ movie.genresIds.contains($0.id) })
+            cell.configure(genres: movieGenres)
             guard let dataSource = self.dataSource, let image = dataSource.images[movie.id] else {
                 self.getMovieBackdropInteractor?.get(movie: movie)
                 return
@@ -55,6 +59,10 @@ class UpcomingMoviesViewController: UIViewController, ListUpcomingMoviesDelegate
         guard let dataSource = dataSource else { return }
         dataSource.objects = dataSource.objects + movies
         tableView.reloadData()
+    }
+
+    func didLoad(genres: [Genre]) {
+        self.genres = genres
     }
 
     func didGetAvatar(movie: Movie, image: UIImage) {

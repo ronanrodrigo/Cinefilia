@@ -9,6 +9,9 @@ class ListUpcomingMoviesPresenteriOS: ListUpcomingMoviesPresenter {
     }
 
     func loadGenres(genres: [Genre]) {
+        DispatchQueue.main.async {
+            self.delegate?.didLoad(genres: genres)
+        }
     }
 
     func displayMovies(movies: [Movie]) {
