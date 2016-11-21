@@ -10,7 +10,7 @@ class MoviesRouterNavigation: MoviesRouter {
 
     func root() {
         let upcomingMoviesViewController = UpcomingMoviesViewController()
-        addTitleInNavigation(at: upcomingMoviesViewController, with: "Upcoming Movies")
+        addTitleInNavigation(at: upcomingMoviesViewController, with: "UPCOMING MOVIES")
         navigationController.viewControllers = [upcomingMoviesViewController]
     }
 
