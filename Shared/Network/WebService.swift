@@ -3,6 +3,7 @@ public protocol WebService {
     func download(url: URL, completion: @escaping (Data?) -> ())
 }
 
+
 final class WebServiceSession: WebService {
 
     func load<T>(resource: Resource<T>, completion: @escaping (T?, Error?) -> ()) {

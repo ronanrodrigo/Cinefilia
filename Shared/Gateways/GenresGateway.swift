@@ -4,6 +4,7 @@ public protocol GenresGateway {
 
 }
 
+
 public class GenresGatewayWebService: GenresGateway {
 
     private var webService: WebService

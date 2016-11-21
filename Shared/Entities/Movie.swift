@@ -10,6 +10,7 @@ public protocol Movie {
 
 }
 
+
 public struct MovieEntity: Movie {
 
     public var id: Int
