@@ -1,4 +1,5 @@
 public protocol Movie {
+
     var id: Int { get }
     var title: String { get }
     var overview: String { get }
@@ -6,9 +7,11 @@ public protocol Movie {
     var posterPath: String { get }
     var backDropPath: String { get }
     var genres: [Genre] { get }
+
 }
 
 public struct MovieEntity: Movie {
+
     public var id: Int
     public var title: String
     public var overview: String
@@ -43,4 +46,5 @@ public struct MovieEntity: Movie {
         self.init(id: id, title: title, overview: overview, releaseDate: releaseDate, posterPath: posterPath, backDropPath: backDropPath,
                   genres: [])
     }
+
 }

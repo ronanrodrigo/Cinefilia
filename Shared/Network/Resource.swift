@@ -1,6 +1,7 @@
 public typealias JSONDictionary = [String: AnyObject]
 
 public struct Resource<T> {
+
     public let url: URL
     public let parse: (Data) -> T?
 
@@ -15,6 +16,7 @@ public struct Resource<T> {
 }
 
 public struct Resources {
+
     private static let baseUrl = "https://api.themoviedb.org/3"
     private static let apiKey = "1f54bd990f1cdfb230adb312546d765d"
 
@@ -27,4 +29,5 @@ public struct Resources {
             return moviesDictionary.flatMap(MovieEntity.init)
         }
     }
+
 }

@@ -1,9 +1,12 @@
 public protocol Genre {
+
     var id: Int { get }
     var name: String { get }
+
 }
 
 public struct GenreEntity: Genre {
+
     public var id: Int
     public var name: String
 
@@ -19,4 +22,5 @@ public struct GenreEntity: Genre {
 
         self.init(id: id, name: name)
     }
+
 }
