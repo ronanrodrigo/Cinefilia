@@ -14,7 +14,10 @@ class MoviesRouterNavigation: MoviesRouter {
         navigationController.viewControllers = [upcomingMoviesViewController]
     }
 
-    func movieDetail(movie: Movie) {
+    func movieDetail(movie: Movie, movieGenres: [Genre], movieBackdropImage: UIImage?) {
+        let movieDetailViewController = MovieDetailViewController(
+            movie: movie, movieGenres: movieGenres, movieBackdropImage: movieBackdropImage)
+        navigationController.pushViewController(movieDetailViewController, animated: true)
     }
 
     private func addTitleInNavigation(at viewController: UIViewController, with text: String) {
