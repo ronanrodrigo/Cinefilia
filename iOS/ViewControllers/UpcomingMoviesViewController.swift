@@ -36,6 +36,11 @@ class UpcomingMoviesViewController: UIViewController, ListUpcomingMoviesDelegate
     private func configureTableView() {
         let cellNib = UINib(nibName: cellIdentifier, bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: cellIdentifier)
+        configureTableViewDataSource()
+        configureTableViewDelegate()
+    }
+    
+    private func configureTableViewDataSource() {
         tableViewDataSource = GenericTableViewDataSource() { (movie, cell) in
             cell.configure(movie: movie)
             let movieGenres = self.genres.filter({ movie.genresIds.contains($0.id) })
@@ -46,6 +51,10 @@ class UpcomingMoviesViewController: UIViewController, ListUpcomingMoviesDelegate
             }
             cell.configure(image: image)
         }
+        tableView.dataSource = tableViewDataSource
+    }
+    
+    private func configureTableViewDelegate() {
         tableViewDelegate = GenericTableViewDelegate(selectedRow: { row in
             if let movie = self.tableViewDataSource?.objects[row],
                 let navigationController = self.navigationController {
@@ -56,7 +65,6 @@ class UpcomingMoviesViewController: UIViewController, ListUpcomingMoviesDelegate
             }
         })
         tableView.delegate = tableViewDelegate
-        tableView.dataSource = tableViewDataSource
     }
 
     private func configureUpcomingMoviesInteractor() {
