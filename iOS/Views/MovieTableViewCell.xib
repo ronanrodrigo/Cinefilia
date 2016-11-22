@@ -42,7 +42,7 @@
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XLJ-Zj-SOR">
                         <rect key="frame" x="13" y="320" width="0.0" height="15"/>
                         <subviews>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="88B98FC0-5B5A-463F-82B4-DD3EDAA4BF40" translatesAutoresizingMaskIntoConstraints="NO" id="GYs-VH-P4a" userLabel="Genre">
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="95847E6D-1DA2-4655-AC10-6509DE3FFA46" translatesAutoresizingMaskIntoConstraints="NO" id="GYs-VH-P4a" userLabel="Genre">
                                 <rect key="frame" x="0.0" y="0.0" width="0.0" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="width" id="TBX-Nm-4il"/>
@@ -95,17 +95,17 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="backdrop" destination="RKn-bP-lYk" id="M6h-Va-4QM"/>
-                <outlet property="backdropPlaceholder" destination="drQ-iv-u3d" id="hM0-Dg-zFj"/>
-                <outlet property="genresImages" destination="XLJ-Zj-SOR" id="BG1-fw-NhW"/>
-                <outlet property="releaseDate" destination="MqT-wn-oWS" id="gVM-e3-PeB"/>
-                <outlet property="title" destination="xpt-YM-QOM" id="YRx-Le-jnq"/>
+                <outlet property="movieBackdrop" destination="RKn-bP-lYk" id="CAR-MR-nJQ"/>
+                <outlet property="movieBackdropPlaceholder" destination="drQ-iv-u3d" id="EHE-K5-dAG"/>
+                <outlet property="movieGenresImages" destination="XLJ-Zj-SOR" id="fcj-UP-COn"/>
+                <outlet property="movieReleaseDate" destination="MqT-wn-oWS" id="yiV-DW-N6T"/>
+                <outlet property="movieTitle" destination="xpt-YM-QOM" id="WUb-8S-KYh"/>
             </connections>
             <point key="canvasLocation" x="34" y="22"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="88B98FC0-5B5A-463F-82B4-DD3EDAA4BF40" width="25" height="25">
+        <image name="95847E6D-1DA2-4655-AC10-6509DE3FFA46" width="25" height="25">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

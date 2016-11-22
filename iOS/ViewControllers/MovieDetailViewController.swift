@@ -3,15 +3,15 @@ import Shared
 
 class MovieDetailViewController: UIViewController {
 
+    private var movie: Movie?
+    private var movieGenres: [Genre]?
+    private var movieBackdropImage: UIImage?
+
     @IBOutlet weak var movieBackdrop: UIImageView!
     @IBOutlet weak var movieTitle: UILabel!
     @IBOutlet weak var movieOverview: UILabel!
     @IBOutlet weak var movieReleaseDate: UILabel!
     @IBOutlet weak var movieGenresImages: UIStackView!
-
-    private var movie: Movie?
-    private var movieGenres: [Genre]?
-    private var movieBackdropImage: UIImage?
 
     convenience init(movie: Movie, movieGenres: [Genre], movieBackdropImage: UIImage?) {
         self.init()

@@ -3,22 +3,22 @@ import Shared
 
 class MovieTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var backdrop: UIImageView!
-    @IBOutlet weak var genresImages: UIStackView!
-    @IBOutlet weak var releaseDate: UILabel!
-    @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var backdropPlaceholder: UIView!
+    @IBOutlet weak var movieBackdrop: UIImageView!
+    @IBOutlet weak var movieGenresImages: UIStackView!
+    @IBOutlet weak var movieReleaseDate: UILabel!
+    @IBOutlet weak var movieTitle: UILabel!
+    @IBOutlet weak var movieBackdropPlaceholder: UIView!
 
     func configure(movie: Movie) {
-        title.text = movie.title.uppercased()
+        movieTitle.text = movie.title.uppercased()
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .short
-        releaseDate.text = dateFormatter.string(from: movie.releaseDate)
+        movieReleaseDate.text = dateFormatter.string(from: movie.releaseDate)
     }
 
     func configure(image: UIImage) {
-        backdrop.image = image
-        backdropPlaceholder.isHidden = true
+        movieBackdrop.image = image
+        movieBackdropPlaceholder.isHidden = true
     }
 
     func configure(genres: [Genre]) {
@@ -26,17 +26,17 @@ class MovieTableViewCell: UITableViewCell {
             let genreImage = UIImage(named: genre.name)
             let genreImageView = UIImageView(image: genreImage)
             genreImageView.contentMode = UIViewContentMode.scaleAspectFit
-            genresImages.addArrangedSubview(genreImageView)
+            movieGenresImages.addArrangedSubview(genreImageView)
         }
-        genresImages.arrangedSubviews
+        movieGenresImages.arrangedSubviews
             .filter({$0.isHidden})
-            .forEach(genresImages.removeArrangedSubview)
+            .forEach(movieGenresImages.removeArrangedSubview)
     }
 
     override func prepareForReuse() {
-        backdrop.image = #imageLiteral(resourceName: "Movie")
-        backdropPlaceholder.isHidden = false
-        genresImages.arrangedSubviews.forEach({$0.isHidden = true})
+        movieBackdrop.image = #imageLiteral(resourceName: "Movie")
+        movieBackdropPlaceholder.isHidden = false
+        movieGenresImages.arrangedSubviews.forEach({$0.isHidden = true})
     }
 
 }
