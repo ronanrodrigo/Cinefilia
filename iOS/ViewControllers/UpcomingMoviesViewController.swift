@@ -13,7 +13,8 @@ protocol ListUpcomingMoviesDelegate: class {
 class UpcomingMoviesViewController: UIViewController, ListUpcomingMoviesDelegate {
 
     private var cellIdentifier = String(describing: MovieTableViewCell.self)
-    private var dataSource: GenericDataSource<Movie, MovieTableViewCell>?
+    private var tableViewDataSource: GenericDataSource<Movie, MovieTableViewCell>?
+    private var tableViewDelegate: GenericTableViewDelegate?
     private var listUpcomingMoviesInteractor: ListUpcomingMoviesInteractor?
     private var getMovieBackdropInteractor: GetMovieBackdropInteractor?
     private var genres: [Genre] = []
@@ -35,17 +36,27 @@ class UpcomingMoviesViewController: UIViewController, ListUpcomingMoviesDelegate
     private func configureTableView() {
         let cellNib = UINib(nibName: cellIdentifier, bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: cellIdentifier)
-        dataSource = GenericDataSource() { (movie, cell) in
+        tableViewDataSource = GenericDataSource() { (movie, cell) in
             cell.configure(movie: movie)
             let movieGenres = self.genres.filter({ movie.genresIds.contains($0.id) })
             cell.configure(genres: movieGenres)
-            guard let dataSource = self.dataSource, let image = dataSource.images[movie.id] else {
+            guard let dataSource = self.tableViewDataSource, let image = dataSource.images[movie.id] else {
                 self.getMovieBackdropInteractor?.get(movie: movie)
                 return
             }
             cell.configure(image: image)
         }
-        tableView.dataSource = dataSource
+        tableViewDelegate = GenericTableViewDelegate(selectedRow: { row in
+            if let movie = self.tableViewDataSource?.objects[row],
+                let navigationController = self.navigationController {
+                let movieImage = self.tableViewDataSource?.images[movie.id]
+                let movieGenres = self.genres.filter({ movie.genresIds.contains($0.id) })
+                MoviesRouterNavigation(navigationController: navigationController)
+                    .movieDetail(movie: movie, movieGenres: movieGenres, movieBackdropImage: movieImage)
+            }
+        })
+        tableView.delegate = tableViewDelegate
+        tableView.dataSource = tableViewDataSource
     }
 
     private func configureUpcomingMoviesInteractor() {
@@ -56,7 +67,7 @@ class UpcomingMoviesViewController: UIViewController, ListUpcomingMoviesDelegate
     }
 
     func didList(movies: [Movie]) {
-        guard let dataSource = dataSource else { return }
+        guard let dataSource = tableViewDataSource else { return }
         dataSource.objects = dataSource.objects + movies
         tableView.reloadData()
     }
@@ -66,7 +77,7 @@ class UpcomingMoviesViewController: UIViewController, ListUpcomingMoviesDelegate
     }
 
     func didGetAvatar(movie: Movie, image: UIImage) {
-        guard let dataSource = dataSource,
+        guard let dataSource = tableViewDataSource,
             let rowToReload = dataSource.objects.index(where: {$0.id == movie.id})
             else { return }
         dataSource.images[movie.id] = image
