@@ -39,7 +39,7 @@ class UpcomingMoviesViewController: UIViewController, ListUpcomingMoviesDelegate
         configureTableViewDataSource()
         configureTableViewDelegate()
     }
-    
+
     private func configureTableViewDataSource() {
         tableViewDataSource = GenericTableViewDataSource() { (movie, cell) in
             cell.configure(movie: movie)
@@ -53,7 +53,7 @@ class UpcomingMoviesViewController: UIViewController, ListUpcomingMoviesDelegate
         }
         tableView.dataSource = tableViewDataSource
     }
-    
+
     private func configureTableViewDelegate() {
         tableViewDelegate = GenericTableViewDelegate(selectedRow: { row in
             if let movie = self.tableViewDataSource?.objects[row],
