@@ -6,6 +6,7 @@ class MoviesRouterNavigation: MoviesRouter {
 
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
+        self.navigationController.navigationBar.isTranslucent = false
     }
 
     func root() {
