@@ -1,7 +1,7 @@
 import UIKit
 import Shared
 
-class GenericDataSource<T, U: UITableViewCell>: NSObject, UITableViewDataSource {
+class GenericTableViewDataSource<T, U: UITableViewCell>: NSObject, UITableViewDataSource {
 
     var objects: [T] = []
     var images: [Int: UIImage] = [Int: UIImage]()

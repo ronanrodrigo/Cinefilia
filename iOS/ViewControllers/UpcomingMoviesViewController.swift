@@ -13,7 +13,7 @@ protocol ListUpcomingMoviesDelegate: class {
 class UpcomingMoviesViewController: UIViewController, ListUpcomingMoviesDelegate {
 
     private var cellIdentifier = String(describing: MovieTableViewCell.self)
-    private var tableViewDataSource: GenericDataSource<Movie, MovieTableViewCell>?
+    private var tableViewDataSource: GenericTableViewDataSource<Movie, MovieTableViewCell>?
     private var tableViewDelegate: GenericTableViewDelegate?
     private var listUpcomingMoviesInteractor: ListUpcomingMoviesInteractor?
     private var getMovieBackdropInteractor: GetMovieBackdropInteractor?
@@ -36,7 +36,7 @@ class UpcomingMoviesViewController: UIViewController, ListUpcomingMoviesDelegate
     private func configureTableView() {
         let cellNib = UINib(nibName: cellIdentifier, bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: cellIdentifier)
-        tableViewDataSource = GenericDataSource() { (movie, cell) in
+        tableViewDataSource = GenericTableViewDataSource() { (movie, cell) in
             cell.configure(movie: movie)
             let movieGenres = self.genres.filter({ movie.genresIds.contains($0.id) })
             cell.configure(genres: movieGenres)

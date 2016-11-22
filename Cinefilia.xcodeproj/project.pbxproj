@@ -26,7 +26,7 @@
 		347F00F61DE369270099D637 /* UpcomingMoviesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 347F00F41DE369270099D637 /* UpcomingMoviesViewController.xib */; };
 		347F00F91DE3699C0099D637 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347F00F71DE3699C0099D637 /* MovieTableViewCell.swift */; };
 		347F00FA1DE3699C0099D637 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 347F00F81DE3699C0099D637 /* MovieTableViewCell.xib */; };
-		347F00FC1DE377180099D637 /* GenericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347F00FB1DE377180099D637 /* GenericDataSource.swift */; };
+		347F00FC1DE377180099D637 /* GenericTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347F00FB1DE377180099D637 /* GenericTableViewDataSource.swift */; };
 		347F00FE1DE377580099D637 /* GetMovieBackdropInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347F00FD1DE377580099D637 /* GetMovieBackdropInteractor.swift */; };
 		347F01031DE379850099D637 /* ListUpcomingMoviesPresenteriOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347F01021DE379850099D637 /* ListUpcomingMoviesPresenteriOS.swift */; };
 		347F01061DE37B770099D637 /* MoviesRouterNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347F01051DE37B770099D637 /* MoviesRouterNavigation.swift */; };
@@ -110,7 +110,7 @@
 		347F00F41DE369270099D637 /* UpcomingMoviesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpcomingMoviesViewController.xib; sourceTree = "<group>"; };
 		347F00F71DE3699C0099D637 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		347F00F81DE3699C0099D637 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
-		347F00FB1DE377180099D637 /* GenericDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericDataSource.swift; sourceTree = "<group>"; };
+		347F00FB1DE377180099D637 /* GenericTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericTableViewDataSource.swift; sourceTree = "<group>"; };
 		347F00FD1DE377580099D637 /* GetMovieBackdropInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetMovieBackdropInteractor.swift; sourceTree = "<group>"; };
 		347F01021DE379850099D637 /* ListUpcomingMoviesPresenteriOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListUpcomingMoviesPresenteriOS.swift; sourceTree = "<group>"; };
 		347F01051DE37B770099D637 /* MoviesRouterNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesRouterNavigation.swift; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 		347F010B1DE3873D0099D637 /* GetMovieBackdropInteractorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetMovieBackdropInteractorFactory.swift; sourceTree = "<group>"; };
 		347F010D1DE38DA70099D637 /* GetMovieBackdropInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetMovieBackdropInteractorTests.swift; sourceTree = "<group>"; };
 		347F010F1DE38DE50099D637 /* GetMovieBackdropPresenterStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetMovieBackdropPresenterStub.swift; sourceTree = "<group>"; };
-		347F01131DE39B230099D637 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieDetailViewController.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		347F01131DE39B230099D637 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		347F01141DE39B230099D637 /* MovieDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieDetailViewController.xib; sourceTree = "<group>"; };
 		348238421DDCE77B00CAF5D6 /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		348238451DDCE77B00CAF5D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -268,7 +268,7 @@
 		347F00F21DE369000099D637 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				347F00FB1DE377180099D637 /* GenericDataSource.swift */,
+				347F00FB1DE377180099D637 /* GenericTableViewDataSource.swift */,
 				34D706931DE4A1DF001A0A5C /* GenericTableViewDelegate.swift */,
 				347F01131DE39B230099D637 /* MovieDetailViewController.swift */,
 				347F00F31DE369270099D637 /* UpcomingMoviesViewController.swift */,
@@ -599,7 +599,7 @@
 				347F00F51DE369270099D637 /* UpcomingMoviesViewController.swift in Sources */,
 				347F01151DE39B230099D637 /* MovieDetailViewController.swift in Sources */,
 				347F010A1DE3865C0099D637 /* GetMovieBackdropPresenteriOS.swift in Sources */,
-				347F00FC1DE377180099D637 /* GenericDataSource.swift in Sources */,
+				347F00FC1DE377180099D637 /* GenericTableViewDataSource.swift in Sources */,
 				347F00F91DE3699C0099D637 /* MovieTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
