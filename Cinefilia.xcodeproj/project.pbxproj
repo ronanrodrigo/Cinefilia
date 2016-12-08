@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C3CFD9E1DF836A000316D55 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3482386E1DDCE82E00CAF5D6 /* Shared.framework */; };
+		2C3CFD9F1DF836A000316D55 /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3482386E1DDCE82E00CAF5D6 /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		347F00C31DE2162F0099D637 /* Genres.json in Resources */ = {isa = PBXBuildFile; fileRef = 347F00C21DE2162F0099D637 /* Genres.json */; };
 		347F00C51DE2168C0099D637 /* GenreEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347F00C41DE2168C0099D637 /* GenreEntityTests.swift */; };
 		347F00C61DE2173E0099D637 /* Genres.json in Resources */ = {isa = PBXBuildFile; fileRef = 347F00C21DE2162F0099D637 /* Genres.json */; };
@@ -42,8 +44,6 @@
 		348238501DDCE77B00CAF5D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3482384E1DDCE77B00CAF5D6 /* LaunchScreen.storyboard */; };
 		348238771DDCE82E00CAF5D6 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3482386E1DDCE82E00CAF5D6 /* Shared.framework */; };
 		348238801DDCE82E00CAF5D6 /* Shared.h in Headers */ = {isa = PBXBuildFile; fileRef = 348238701DDCE82E00CAF5D6 /* Shared.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		348238831DDCE82E00CAF5D6 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3482386E1DDCE82E00CAF5D6 /* Shared.framework */; };
-		348238841DDCE82E00CAF5D6 /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3482386E1DDCE82E00CAF5D6 /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		348C8B421DDCF0B500025B82 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348C8B411DDCF0B500025B82 /* Movie.swift */; };
 		348C8B441DDCF43B00025B82 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348C8B431DDCF43B00025B82 /* Genre.swift */; };
 		34B879A81DE0C94900999C3D /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B879A71DE0C94900999C3D /* Resource.swift */; };
@@ -54,6 +54,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2C3CFDA01DF836A000316D55 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3457A6D11DDCE6C3008B08AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3482386D1DDCE82E00CAF5D6;
+			remoteInfo = Shared;
+		};
 		348238781DDCE82E00CAF5D6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3457A6D11DDCE6C3008B08AC /* Project object */;
@@ -68,23 +75,16 @@
 			remoteGlobalIDString = 348238411DDCE77B00CAF5D6;
 			remoteInfo = iOS;
 		};
-		348238811DDCE82E00CAF5D6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3457A6D11DDCE6C3008B08AC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3482386D1DDCE82E00CAF5D6;
-			remoteInfo = Shared;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		348238681DDCE7E900CAF5D6 /* Embed Frameworks */ = {
+		2C3CFDA21DF836A000316D55 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				348238841DDCE82E00CAF5D6 /* Shared.framework in Embed Frameworks */,
+				2C3CFD9F1DF836A000316D55 /* Shared.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,7 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				348238831DDCE82E00CAF5D6 /* Shared.framework in Frameworks */,
+				2C3CFD9E1DF836A000316D55 /* Shared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,13 +438,13 @@
 				3482383E1DDCE77B00CAF5D6 /* Sources */,
 				3482383F1DDCE77B00CAF5D6 /* Frameworks */,
 				348238401DDCE77B00CAF5D6 /* Resources */,
-				348238681DDCE7E900CAF5D6 /* Embed Frameworks */,
 				34B879AC1DE0CF6600999C3D /* Swiftlint */,
+				2C3CFDA21DF836A000316D55 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				348238821DDCE82E00CAF5D6 /* PBXTargetDependency */,
+				2C3CFDA11DF836A000316D55 /* PBXTargetDependency */,
 			);
 			name = iOS;
 			productName = iOS;
@@ -643,6 +643,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2C3CFDA11DF836A000316D55 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3482386D1DDCE82E00CAF5D6 /* Shared */;
+			targetProxy = 2C3CFDA01DF836A000316D55 /* PBXContainerItemProxy */;
+		};
 		348238791DDCE82E00CAF5D6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3482386D1DDCE82E00CAF5D6 /* Shared */;
@@ -652,11 +657,6 @@
 			isa = PBXTargetDependency;
 			target = 348238411DDCE77B00CAF5D6 /* iOS */;
 			targetProxy = 3482387A1DDCE82E00CAF5D6 /* PBXContainerItemProxy */;
-		};
-		348238821DDCE82E00CAF5D6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3482386D1DDCE82E00CAF5D6 /* Shared */;
-			targetProxy = 348238811DDCE82E00CAF5D6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -676,12 +676,48 @@
 		3457A6D51DDCE6C3008B08AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};
 		3457A6D61DDCE6C3008B08AC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 			};
 			name = Release;
 		};
@@ -816,7 +852,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -882,7 +918,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
