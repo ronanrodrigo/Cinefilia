@@ -14,7 +14,7 @@ class UpcomingMoviesViewController: UIViewController, ListUpcomingMoviesDelegate
 
     private var cellIdentifier = String(describing: MovieTableViewCell.self)
     private var tableViewDataSource: GenericTableViewDataSource<Movie, MovieTableViewCell>?
-    private weak var tableViewDelegate: GenericTableViewDelegate?
+    private var tableViewDelegate: GenericTableViewDelegate?
     private var listUpcomingMoviesInteractor: ListUpcomingMoviesInteractor?
     private var getMovieBackdropInteractor: GetMovieBackdropInteractor?
     private var genres: [Genre] = []
@@ -64,7 +64,7 @@ class UpcomingMoviesViewController: UIViewController, ListUpcomingMoviesDelegate
                     .movieDetail(movie: movie, movieGenres: movieGenres, movieBackdropImage: movieImage)
             }
         })
-        tableView.delegate = tableViewDelegate
+        tableView.delegate =  tableViewDelegate
     }
 
     private func configureUpcomingMoviesInteractor() {
