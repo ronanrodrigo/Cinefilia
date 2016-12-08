@@ -14,7 +14,7 @@ class UpcomingMoviesViewController: UIViewController, ListUpcomingMoviesDelegate
 
     private var cellIdentifier = String(describing: MovieTableViewCell.self)
     private var tableViewDataSource: GenericTableViewDataSource<Movie, MovieTableViewCell>?
-    private var tableViewDelegate: GenericTableViewDelegate?
+    private weak var tableViewDelegate: GenericTableViewDelegate?
     private var listUpcomingMoviesInteractor: ListUpcomingMoviesInteractor?
     private var getMovieBackdropInteractor: GetMovieBackdropInteractor?
     private var genres: [Genre] = []
