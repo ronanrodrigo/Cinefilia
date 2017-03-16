@@ -1,0 +1,13 @@
+---
+engines:
+  tailor:
+    enabled: true
+    checks:
+      redundant-optional-binding:
+        enabled: false
+ignore:
+  - "Pods"
+  - "SharedTests"
+ratings:
+  paths:
+  - "**.swift"
