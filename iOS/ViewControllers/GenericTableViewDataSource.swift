@@ -6,9 +6,9 @@ class GenericTableViewDataSource<T, U: UITableViewCell>: NSObject, UITableViewDa
     var objects: [T] = []
     var images: [Int: UIImage] = [Int: UIImage]()
     private var cellIdentifier = String(describing: U.self)
-    private var configureCell: (T, U) -> ()
+    private var configureCell: (T, U) -> Void
 
-    init(configureCell: @escaping (T, U) -> ()) {
+    init(configureCell: @escaping (T, U) -> Void) {
         self.configureCell = configureCell
     }
 

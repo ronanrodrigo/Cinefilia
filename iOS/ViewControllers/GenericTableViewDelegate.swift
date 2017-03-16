@@ -2,9 +2,9 @@ import UIKit
 
 class GenericTableViewDelegate: NSObject, UITableViewDelegate {
 
-    var selectedRow: (Int) -> ()
+    var selectedRow: (Int) -> Void
 
-    init(selectedRow: @escaping (Int) -> ()) {
+    init(selectedRow: @escaping (Int) -> Void) {
         self.selectedRow = selectedRow
     }
 

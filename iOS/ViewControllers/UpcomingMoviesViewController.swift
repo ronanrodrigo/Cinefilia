@@ -41,7 +41,7 @@ class UpcomingMoviesViewController: UIViewController, ListUpcomingMoviesDelegate
     }
 
     private func configureTableViewDataSource() {
-        tableViewDataSource = GenericTableViewDataSource() { (movie, cell) in
+        tableViewDataSource = GenericTableViewDataSource { (movie, cell) in
             cell.configure(movie: movie)
             let movieGenres = self.genres.filter({ movie.genresIds.contains($0.id) })
             cell.configure(genres: movieGenres)
